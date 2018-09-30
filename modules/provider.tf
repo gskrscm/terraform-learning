@@ -1,9 +1,9 @@
 provider "aws" {
-    region = "ap-south-1"
+    region = "{var.region}"
 }
 
 resource "aws_vpc" "hello_vpc" {
-  cidr_block       = "190.160.0.0/16"
+  cidr_block       = "{var.cidr_block}"
   instance_tenancy = "default"
 
   tags {
@@ -14,7 +14,7 @@ resource "aws_vpc" "hello_vpc" {
 
 resource "aws_subnet" "hello_subnet_1" {
   vpc_id     = "${aws_vpc.hello_vpc.id}"
-  cidr_block = "190.160.1.0/24"
+  cidr_block = "{var.cidr_block_subnet_1}"
 
   tags {
     Name = "Subnet_1"
