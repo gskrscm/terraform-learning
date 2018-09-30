@@ -7,5 +7,5 @@ variable "cidr_block" {
 }
 
 variable "cidr_block_subnet_1" {
-    default = "170.160.1.0/2"
+    default = "170.160.1.0/24"
 }
