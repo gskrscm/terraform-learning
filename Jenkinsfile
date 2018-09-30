@@ -7,6 +7,6 @@ node{
         sh 'cd dev;terraform plan'
     }
     stage('terraform - dev apply'){
-        sh 'cd dev;terraform apply'
+        sh 'cd dev;terraform apply -auto-approve'
     }
 }
