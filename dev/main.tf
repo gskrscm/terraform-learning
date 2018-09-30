@@ -6,4 +6,6 @@ module "vpc" {
 
 module "ec2" {
   source = "../modules/ec2" 
+  aws_ami_id = "${var.aws_ami_id}"
+  subnet_id = "${var.subnet_id}"
 }
