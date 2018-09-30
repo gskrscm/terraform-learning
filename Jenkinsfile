@@ -6,4 +6,7 @@ node{
         sh 'cd dev;terraform init'
         sh 'cd dev;terraform plan'
     }
+    stage('terraform - dev apply'){
+        sh 'cd dev;terraform apply'
+    }
 }
