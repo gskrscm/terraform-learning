@@ -1,5 +1,5 @@
 node{
-properties([parameters([choice(choices: ['init', 'plan', 'apply -auto-approve', 'destroy'], description: 'terraform commands', name: 'terraform')])])
+properties([parameters([choice(choices: ['init', 'plan', 'apply -auto-approve', 'destroy -auto-approve'], description: 'terraform commands', name: 'terraform')])])
     
     stage('Git Clone'){
         git 'https://github.com/gskrscm/terraform-learning.git'
