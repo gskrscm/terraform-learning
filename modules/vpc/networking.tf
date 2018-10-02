@@ -20,3 +20,8 @@ resource "aws_subnet" "hello_subnet_1" {
     Name = "Subnet_1"
   }
 }
+
+output "subnet_id" {
+  value = "${aws_subnet.hello_subnet_1.id}"
+}
+
